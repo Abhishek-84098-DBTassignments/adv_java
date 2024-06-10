@@ -44,6 +44,7 @@ public class RegisterServlet extends HttpServlet {
 			user.setEmail(email);
 			user.setPassword(passwd);
 			user.setRole(role);
+			@SuppressWarnings("unused")
 			int save = userDao.save(user);
 			resp.sendRedirect("newuser.html");
 			
