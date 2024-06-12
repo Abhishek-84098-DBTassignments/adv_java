@@ -12,7 +12,7 @@
 	Hello, ${lb.user.firstName} ${lb.user.lastName} <hr/>
 	<jsp:useBean id="clb" class="com.sunbeam.beans.CandidateListBean"/>
 	${ clb.fetchCandidates() }
-	<form method="post" action="vote.jsp">
+	<form method="post" action="ctl?page=vote">
 		<c:forEach var="c" items="${clb.candidateList}">
 			<input type="radio" name="candidate" value="${c.id}"/> ${c.name} - ${c.party} <br/>
 		</c:forEach>

@@ -14,11 +14,11 @@
 	${ ucb.updateCandidate() }
 	<c:choose>
 		<c:when test="${ucb.count == 1}">
-			<c:redirect url="result.jsp"/>
+			<c:redirect url="ctl?page=result"/>
 		</c:when>
 		<c:otherwise>
 			Candidate update failed. <br/><br/>
-			<a href="result.jsp">Show Result</a>
+			<a href="ctl?page=result">Show Result</a>
 		</c:otherwise>
 	</c:choose>
 </body>

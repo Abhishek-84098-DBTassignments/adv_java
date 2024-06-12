@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h3>Online Voting</h3>
-	<form method="post" action="register.jsp">
+	<form method="post" action="ctl?page=register">
 		 First Name: <input type="text" name="firstName"/> <br/><br/>
 		 Last Name: <input type="text" name="lastName"/> <br/><br/>
 		 Email: <input type="text" name="email"/> <br/><br/>

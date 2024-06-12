@@ -30,10 +30,10 @@
 	    			<td>${c.party }</td>
 	    			<td>${c.votes }</td>
 	    			<td>
-	    				<a href="editcand.jsp?id=${c.id}">
+	    				<a href="ctl?page=editcand&id=${c.id}">
 	    					<img alt="Edit" src="images/edit.png" width="20" height="20"/>
 	    				</a>
-	    				<a href="delcand.jsp?id=${c.id}">
+	    				<a href="ctl?page=delcand&id=${c.id}">
 	    					<img alt="delete" src="images/delete.png" width="20" height="20"/>
 	    				</a>
 	    			</td>

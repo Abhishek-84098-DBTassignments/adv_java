@@ -21,11 +21,11 @@
 	<c:choose>
 		<c:when test="${rb.count == 1}">
 			Registration successful.
-			<a href="index.jsp">Sign In</a>
+			<a href="ctl?page=index">Sign In</a>
 		</c:when>
 		<c:otherwise>
 			Registration failed.
-			<a href="newuser.jsp">Sign Up</a>
+			<a href="ctl?page=newuser">Sign Up</a>
 		</c:otherwise>
 	</c:choose>
 	

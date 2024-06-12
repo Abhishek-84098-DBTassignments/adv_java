@@ -12,6 +12,6 @@
 	<jsp:useBean id="dcb" class="com.sunbeam.beans.DeleteCandidateBean"/>
 	<jsp:setProperty property="*" name="dcb"/>
 	${dcb.deleteCandidate()}
-	<c:redirect url="result.jsp"/>
+	<c:redirect url="ctl?page=result"/>
 </body>
 </html>

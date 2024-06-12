@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h3>${initParam.appTitle}</h3>
-	<form method="post" action="login.jsp">
+	<form method="post" action="ctl?page=login">
 		 Email: <input type="text" name="email"/> <br/><br/>
 		 Password: <input type="password" name="passwd"/> <br/><br/>
 		 <input type="submit" Value="Sign In"/>

@@ -8,31 +8,20 @@
 <title>Vote</title>
 </head>
 <body>
-	<h3>${initParam.appTitle}</h3>
-	<jsp:useBean id="vb" class="com.sunbeam.beans.VoteBean"/>
-	<jsp:useBean id="lb" class="com.sunbeam.beans.LoginBean" scope="session"/>
-	<jsp:setProperty property="id" name="vb" param="candidate"/>
-	<jsp:setProperty property="userId" name="vb" value="${lb.user.id }"/>
-	Hello,${lb.user.firstName}${lb.user.firstName}<hr/>
-	${vb.getStatusVote()}
+	<h2>${initParam.appTitle }</h2>
+	Hello, ${lb.user.firstName }${lb.user.lastName }<hr/>
 	<c:choose>
-		<c:when test="${vb.voteStatus == 1 }"><
-			${vb.vote()}
-			<c:choose>
-				<c:when test="${vb.getCnt() != 0}">
-					<h3>Vote register successfully!!!</h3>
-					${vb.setStatusUser()}
-					<a href="index.jsp">Logout</a>
-				</c:when>
-				<c:otherwise>
-					<h3>Vote failed!!!</h3>
-				</c:otherwise>
-			</c:choose>
+		<c:when test="${lb.user.status == 0 }">
+			<jsp:useBean id="vb" class="com.sunbeam.beans.VoteBean"/>
+			<jsp:setProperty  name="vb" property="userId" value="${lb.user.id}"/>
+			<jsp:setProperty  name="vb" property="candId" param="candidate"/>
+			${vb.vote}
+			<c:redirect url="ctl?page=logout"/>
 		</c:when>
 		<c:otherwise>
-			<h2>Vote registered already.Get Lost!!!</h2>
-			<a href="index.jsp">Logout</a>
+			Vote registered already!!! Get Lost!!!
 		</c:otherwise>
 	</c:choose>
+	<a href="ctl?page=index">Logout</a>
 </body>
 </html>
